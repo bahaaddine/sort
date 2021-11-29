@@ -1,0 +1,36 @@
+
+///
+PROCEDURE InsertionSort(size : Integer )
+VAR 
+i, j, index : Integer;
+BEGIN
+    FOR i FROM 2 TO size DO
+        index := numbers[i];
+        j := i;
+        WHILE ((j > 1) AND (numbers[j-1] > index)) DO
+                numbers[j] := numbers[j-1];
+            j := j - 1;
+        END_WHILE 
+        numbers[j] := index;
+    END_FOR
+END;
+///
+ALGORITHM algorithm_name
+VAR
+    x: INTEGER;
+    numbers : array[n] of Integer;
+BEGIN
+    Write('Insertion Example:',n);
+    read(n)
+    
+   for x:= 0 to n do
+      writeln('unsorted[', x, '] = ', numbers[x] );
+
+   InsertionSort(5);
+
+   for x:= 0 to n do
+      writeln('sorted[', x, '] = ', numbers[x] );
+
+END
+///
+
